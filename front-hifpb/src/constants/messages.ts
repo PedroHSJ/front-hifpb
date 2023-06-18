@@ -1,0 +1,9 @@
+export const REQUIRED_FIELD = 'Campo obrigatório.';
+export const INVALID_NAME = 'Esse nome é inválido.';
+export const INVALID_EMAIL = 'Formato de email inválido.';
+export const INVALID_CPF = 'Formato de CPF inválido.';
+export const INVALID_CNPJ = 'Formato de CNPJ inválido.';
+export const SHORT_PASS = 'Senha muito curta.';
+export const INVALID_NUMBER = 'Utilize no máximo 6 casas decimais.';
+export const INVALID_DATE = 'A data informada é inválida.';
+export const INVALID_FORMAT = 'Formato inválido';

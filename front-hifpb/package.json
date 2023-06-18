@@ -1,0 +1,37 @@
+{
+  "name": "front-hifpb",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^3.1.0",
+    "@tanstack/react-query": "^4.29.3",
+    "aos": "^2.3.4",
+    "axios": "^1.3.5",
+    "dotenv": "^16.0.3",
+    "jwt-decode": "^3.1.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.43.9",
+    "react-icons": "^4.8.0",
+    "react-router-dom": "^6.10.0",
+    "react-toastify": "^9.1.2",
+    "styled-components": "^5.3.9",
+    "yup": "^1.1.1"
+  },
+  "devDependencies": {
+    "@types/aos": "^3.0.4",
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@types/styled-components": "^5.1.26",
+    "@vitejs/plugin-react": "^3.1.0",
+    "typescript": "^4.9.3",
+    "vite": "^4.2.0"
+  }
+}
