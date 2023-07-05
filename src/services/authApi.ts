@@ -2,13 +2,21 @@ import { AxiosResponse } from "axios";
 import { ISignInForm } from "../interfaces/ISignInForm";
 import { api } from ".";
 
-async function authLogin({ username, password }: ISignInForm): Promise<any> {
-  //const userTypeValue = userTypes.find(value => value.key == userType);
-  const response = await api.post<unknown, AxiosResponse<any>>(`/auth/`, {
-    username,
-    password,
-  });
-  console.log(response.data);
+interface IAuhtResponse {
+  token: string;
+}
+
+async function authLogin({
+  username,
+  password,
+}: ISignInForm): Promise<IAuhtResponse> {
+  const response = await api.post<unknown, AxiosResponse<IAuhtResponse>>(
+    `/auth/`,
+    {
+      username,
+      password,
+    }
+  );
   return response.data;
 }
 

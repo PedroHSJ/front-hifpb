@@ -29,7 +29,6 @@ const AuthProvider = ({ children }: IAuthProviderProps) => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | unknown>("");
   const [isAuthorized, setIsAuthorized] = useState(false);
-  const [token, setToken] = useState("");
 
   useEffect(() => {
     const userToken = localStorage.getItem("@token");
@@ -44,9 +43,10 @@ const AuthProvider = ({ children }: IAuthProviderProps) => {
     try {
       setLoading(true);
       setError("");
-      const token = await authApi.authLogin(loginFormData);
-      localStorage.setItem("@token", token);
-      const jwtToken = jwt<{ uid: string }>(token);
+      const data = await authApi.authLogin(loginFormData);
+      localStorage.setItem("@token", data.token);
+      const jwtToken = jwt<{ uid: string }>(data.token);
+      console.log(jwtToken);
       localStorage.setItem("@user/id", jwtToken.uid);
       setIsAuthorized(true);
     } catch (e) {
@@ -78,7 +78,6 @@ const AuthProvider = ({ children }: IAuthProviderProps) => {
 
 const useAuth = () => {
   const context = useContext(AuthContext);
-  console.log("useAuth", context);
   return context;
 };
 

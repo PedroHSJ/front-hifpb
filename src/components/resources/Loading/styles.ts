@@ -10,8 +10,8 @@ export const Dots = styled.div`
   border: 8px solid #f3f3f3; /* cor do contorno */
   border-top: 8px solid ${({ theme }) => theme.colors?.primary}; /* cor da linha de preenchimento */
   border-radius: 50%;
-  width: 60px;
-  height: 60px;
+  width: 30px;
+  height: 30px;
   animation: spin 1s linear infinite;
 
   @keyframes spin {

@@ -34,7 +34,8 @@ export const SignInCard = (): JSX.Element => {
 
   useEffect(() => {
     if (!error) return;
-    toast.error(`Erro no login: ${handleErrorMessage(error)}`);
+    const errorOK = error as Error;
+    toast.error(`Erro no login: ${errorOK.message}`);
   }, [error]);
 
   return (

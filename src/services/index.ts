@@ -4,6 +4,7 @@ import tokenApi from "./tokenApi";
 import logApi from "./logApi";
 import userApi from "./userApi";
 import playgroundApi from "./playgroundApi";
+import estabelecimentoApi from "./estabelecimentoApi";
 
 const api = axios.create({
   baseURL: "http://localhost:3000",
@@ -22,4 +23,12 @@ api.interceptors.request.use(
   }
 );
 
-export { api, authApi, tokenApi, logApi, userApi, playgroundApi };
+export {
+  api,
+  authApi,
+  tokenApi,
+  logApi,
+  userApi,
+  playgroundApi,
+  estabelecimentoApi,
+};
